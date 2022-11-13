@@ -1,0 +1,117 @@
+:root {
+  --title: "Franklin Gothic Condensed", "Arial Narrow", sans-serif;
+  --text: "Franklin Gothic Book", "Arial", sans-serif;
+  --code: "Courier New", monospace;
+
+  --b: #000000;
+  --do: #e44d26;
+  --lo: #f16529;
+  --db: #264de4;
+  --lb: #2965f1;
+  --y: #f7df1e;
+  --dw: #ebebeb;
+  --lw: #ffffff;
+}
+
+body {
+  margin: 0px;
+}
+
+.header {
+  background-color: var(--y);
+  padding: 16px;
+}
+
+input {
+  background-color: var(--y);
+  border: none;
+  border-bottom: 2px solid var(--b);
+  color: var(--b);
+  font-family: var(--title);
+  font-weight: bold;
+  font-size: 32px;
+  padding: 0px;
+}
+
+#myUL {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  margin: 8px;
+  padding: 0px;
+}
+
+.html {
+  background-color: var(--do);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 256px;
+  padding: 16px;
+  margin: 8px;
+}
+
+.css {
+  background-color: var(--db);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 256px;
+  padding: 16px;
+  margin: 8px;
+}
+
+h1,
+span {
+  color: var(--b);
+  font-family: var(--title);
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+h2 {
+  color: var(--dw);
+  font-family: var(--title);
+  font-size: 64px;
+  margin: 0px;
+  text-align: center;
+}
+
+p {
+  color: var(--dw);
+  font-family: var(--text);
+  margin: 0px;
+}
+
+code {
+  color: var(--dw);
+  font-family: var(--code);
+  margin: 0px;
+}
+
+a {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--dw);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dw);
+  border-right: 2px solid var(--db);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--db);
+  border-radius: 16px 0px 0px 16px;
+  min-height: 32px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lb);
+}
