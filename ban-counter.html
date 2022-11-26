@@ -35,12 +35,12 @@
   </body>
   <script>
     function update() {
-      console.clear();
       ms = Date.now() - 1650754800000;
       d = Math.floor(ms / 86400000);
       s = Math.ceil((Math.ceil(ms / 86400000) * 86400000 - ms) / 1000);
       document.getElementById("d").textContent = d;
       document.getElementById("s").textContent = "Deze pagina updatet over " + s + " seconden";
+      console.log("ms", ms, "d", d, "s", s);
     }
     update();
 
