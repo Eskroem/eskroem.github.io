@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 :root {
-  --title: "Franklin Gothic Condensed", "Arial Narrow", sans-serif;
-  --text: "Franklin Gothic Book", "Arial", sans-serif;
-  --code: "Courier New", monospace;
+  --title: "Roboto", sans-serif;
+  --text: "Roboto", sans-serif;
+  --code: "JetBrains Mono", monospace;
 
   --b: #000000;
   --do: #e44d26;
@@ -22,6 +24,7 @@ body {
   color: var(--b);
   padding: 16px;
 }
+
 .footer {
   background-color: var(--y);
   padding: 16px;
@@ -48,7 +51,7 @@ input::placeholder {
 
 #myUL {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
   margin: 8px;
   padding: 0px;
 }
@@ -59,7 +62,7 @@ input::placeholder {
   color: var(--dw);
   display: flex;
   flex-direction: column;
-  height: 256px;
+  height: 384px;
   padding: 16px;
   margin: 8px;
 }
@@ -70,7 +73,7 @@ input::placeholder {
   color: var(--dw);
   display: flex;
   flex-direction: column;
-  height: 256px;
+  height: 384;
   padding: 16px;
   margin: 8px;
 }
@@ -78,14 +81,15 @@ input::placeholder {
 h1,
 span {
   font-family: var(--title);
-  font-size: 32px;
   font-weight: bold;
+  font-size: 32px;
   margin: 0px;
 }
 
 h2 {
-  font-family: var(--title);
+  font-family: var(--code);
   font-size: 64px;
+  font-weight: bold;
   margin: 0px;
   text-align: center;
 }
@@ -128,25 +132,12 @@ a:hover {
   text-decoration: none;
 }
 
-::-webkit-scrollbar {
-  width: 16px;
-}
+/* DAGEN SINDS BAN */
 
-::-webkit-scrollbar-button {
-  background-color: var(--dw);
-}
-
-::-webkit-scrollbar-track {
-  background: var(--dw);
-  border-right: 2px solid var(--db);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--db);
-  border-radius: 16px 0px 0px 16px;
-  min-height: 32px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--lb);
+.ban {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 512px;
 }
