@@ -1,0 +1,44 @@
+<!--
+██╗   ██╗███╗   ██╗██████╗  █████╗ ███╗   ██╗
+██║   ██║████╗  ██║██╔══██╗██╔══██╗████╗  ██║
+██║   ██║██╔██╗ ██║██████╔╝███████║██╔██╗ ██║
+██║   ██║██║╚██╗██║██╔══██╗██╔══██║██║╚██╗██║
+╚██████╔╝██║ ╚████║██████╔╝██║  ██║██║ ╚████║
+ ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
+██████╗ ██╗     ███████╗
+██╔══██╗██║     ██╔════╝
+██████╔╝██║     ███████╗
+██╔═══╝ ██║     ╚════██║
+██║     ███████╗███████║
+╚═╝     ╚══════╝╚══════╝
+-->
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dagen sinds ban</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Dagen sinds ban</h1>
+      <a href="index.html">Home</a>
+    </div>
+    <div class="ban">
+      <p>Ik ben nu al</p>
+      <h2 id="counter"></h2>
+      <p>dagen geband van daboyzzz</p>
+    </div>
+  </body>
+  <script>
+    document.getElementById("counter").textContent = // Zoekt de tekst van elementen met de ID "counter"
+      Math.floor(
+        // Rondt af naar beneden
+        (Date.now() - // Huidige datum in unix millis
+          1650751200000) / // 24 april 2022 in unix millis
+          86400000 // Aantal milliseconden in een dag
+      );
+  </script>
+</html>
