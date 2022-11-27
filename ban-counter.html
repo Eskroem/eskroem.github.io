@@ -18,15 +18,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="d">Dagen sinds ban</title>
+    <title id="d">Eskroem</title>
     <link rel="stylesheet" href="style.css" />
-    <link id="icon" rel="icon" href="7.png" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="header">
+    <header>
       <h1>Dagen sinds ban</h1>
       <a href="index.html">Home</a>
-    </div>
+    </header>
     <div class="ban">
       <h1>Ik ben nu al</h1>
       <div>
@@ -35,7 +35,7 @@
         <img id="2" height="128px" />
       </div>
       <h1>dagen geband van daboyzzz</h1>
-      <p id="s"></p>
+      <span>Deze pagina updatet over <span id="s"></span> seconden</span>
     </div>
   </body>
   <script>
@@ -44,11 +44,10 @@
       d = Math.floor(ms / 86400000);
       s = Math.ceil((Math.ceil(ms / 86400000) * 86400000 - ms) / 1000);
       document.getElementById("d").textContent = d + " dagen sinds ban";
-      document.getElementById("s").textContent = "Deze pagina updatet over " + s + " seconden";
+      document.getElementById("s").textContent = s;
       document.getElementById("0").src = String(d)[0] + ".png";
       document.getElementById("1").src = String(d)[1] + ".png";
       document.getElementById("2").src = String(d)[2] + ".png";
-      document.getElementById("icon").href = String(ms)[7] + ".png";
     }
 
     update();
