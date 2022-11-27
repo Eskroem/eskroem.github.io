@@ -28,7 +28,12 @@
     </div>
     <div class="ban">
       <p>Ik ben nu al</p>
-      <h2 id="d"></h2>
+
+      <div>
+        <img id="0" />
+        <img id="1" />
+        <img id="2" />
+      </div>
       <p>dagen geband van daboyzzz</p>
       <p id="s"></p>
     </div>
@@ -38,12 +43,13 @@
       ms = Date.now() - 1650754800000;
       d = Math.floor(ms / 86400000);
       s = Math.ceil((Math.ceil(ms / 86400000) * 86400000 - ms) / 1000);
-      document.getElementById("d").textContent = d;
       document.getElementById("s").textContent = "Deze pagina updatet over " + s + " seconden";
-      console.log("ms", ms, "d", d, "s", s);
+      document.getElementById("0").src = String(d)[0] + ".png";
+      document.getElementById("1").src = String(d)[1] + ".png";
+      document.getElementById("2").src = String(d)[2] + ".png";
     }
-    update();
 
+    update();
     setInterval(update, 100);
   </script>
 </html>
