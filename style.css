@@ -82,6 +82,8 @@ h3 {
   font-family: var(--title);
   font-weight: 1000;
   font-style: italic;
+  margin: 0px;
+  padding: 8px;
 }
 
 p {
