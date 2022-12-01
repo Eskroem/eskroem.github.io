@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SeanUI</title>
+    <link rel="stylesheet" href="seanui.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav>
+      <img src="eskroem.png" alt="" width="128px" style="position: sticky; top: 0" />
+      <h3>Contents</h3>
+      <a href="#a">a</a>
+      <a href="#h1h6">h1–h6</a>
+    </nav>
+    <section>
+      <header>
+        <p>Navigation: [<a href="index.html">home</a>] [<a href="etg.html">één trefwoord go</a>] [<a href="ban-counter.html">dagen sinds ban</a>]</p>
+        <p>Theme: [<a onclick="darkMode()">dark</a>] [<a onclick="lightMode()">light</a>]</p>
+      </header>
+      <article>
+        <h1>SeanUI</h1>
+        <p>SeanUI is a bunch of CSS that looks nicer than not using it. Keep in mind that in most cases, it is not the same CSS as used in this webpage. SeanUI is still a work in progress. Consider joining the <a href="https://discord.gg/VdMC9Mu9PD">Eskroem Fanclub</a> to get notified when it’s done.</p>
+        <p>If you’re directly copying stuff, use these variables</p>
+        <pre>
+/* For fonts, @import Roboto Flex and JetBrains Mono
+   from https://fonts.google.com */
+
+:root {
+  --text: "Roboto Flex", sans-serif;
+  --code: "JetBrains Mono", monospace;
+  --bg0: #000;
+  --bg-color: #151515;
+  --bg2-color: #2a2a2a;
+  --bg3-color: #3f3f3f;
+  --txt-color: #fff;
+  --red: #f55;
+  --blue: #55f;
+  --purple: #f5f;
+}
+
+body {
+  font-family: var(--text);
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  text-align: justify;
+  transition: 0.2s;
+}</pre
+        >
+        <h2 id="a">&lt;a&gt; Anchor</h2>
+        <a>Anchor</a>
+        <a class="link">Anchor, Link</a>
+        <a class="visited">Anchor, Visited</a>
+        <pre>
+a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline solid currentColor 1px;
+}</pre
+        >
+        <h2 id="h1h6">&lt;h1&gt;–&lt;h6&gt; Section Heading 1–6</h2>
+        <p>You can replace h1 with h1–h6. If you don’t like the bottom border, remove border-bottom.</p>
+        <pre>
+h1 /* With Border */ {
+  font-size: 32px;
+  font-weight: 300;
+  border-bottom: 1px solid var(--bg2-color);
+  margin: 16px;
+}</pre
+        >
+        <pre>
+h1 /* Without Border */ {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 16px;
+}</pre
+        >
+        <h2>Trivia</h2>
+        <p>The Logo used is not an SVG.</p>
+        <p>Eskroem in Japanese is エスクルム.</p>
+      </article>
+    </section>
+  </body>
+  <script>
+    var r = document.querySelector(":root");
+
+    function darkMode() {
+      r.style.setProperty("--bg0-color", "#000");
+      r.style.setProperty("--bg-color", "#151515");
+      r.style.setProperty("--bg2-color", "#2a2a2a");
+      r.style.setProperty("--bg3-color", "#3f3f3f");
+      r.style.setProperty("--txt-color", "#fff");
+      r.style.setProperty("--red", "#f55");
+      r.style.setProperty("--blue", "#55f");
+      r.style.setProperty("--purple", "#f5f");
+    }
+
+    function lightMode() {
+      r.style.setProperty("--bg0-color", "#fff");
+      r.style.setProperty("--bg-color", "#fff");
+      r.style.setProperty("--bg2-color", "#aaa");
+      r.style.setProperty("--bg3-color", "#555");
+      r.style.setProperty("--txt-color", "#000");
+      r.style.setProperty("--red", "#a00");
+      r.style.setProperty("--blue", "#00a");
+      r.style.setProperty("--purple", "#a0a");
+    }
+  </script>
+</html>

@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap");
+
+:root {
+  --text: "Roboto Flex", sans-serif;
+  --code: "JetBrains Mono", monospace;
+  --bg0-color: #000;
+  --bg-color: #151515;
+  --bg2-color: #2a2a2a;
+  --bg3-color: #3f3f3f;
+  --txt-color: #fff;
+  --red: #f55;
+  --blue: #55f;
+  --purple: #f5f;
+}
+
+body {
+  display: flex;
+  font-family: var(--text);
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  text-align: justify;
+  margin: 0px;
+  width: 100%;
+  transition: 0.2s;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 128px;
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--blue);
+  border-left: 1px solid var(--blue);
+  padding: 16px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+a {
+  color: var(--red);
+  text-decoration: none;
+}
+a:link,
+a.link {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:visited,
+a.visited {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+a:hover,
+a.hover {
+  text-decoration: underline solid currentColor 1px;
+}
+
+abbr {
+  text-decoration-thickness: 1px;
+}
+
+b {
+  font-weight: 600px;
+}
+
+button {
+  font-family: var(--text);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+pre {
+  font-family: var(--code);
+  background-color: var(--bg2-color);
+  border: 1px solid var(--bg3-color);
+  padding: 16px;
+}
+
+blockquote {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  border-bottom: 1px solid var(--bg2-color);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 1px solid var(--bg2-color);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+h3 {
+  font-size: 19.2px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+h6 {
+  font-size: 9.6px;
+  font-weight: 1000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg2-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg3-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--txt-color);
+}
