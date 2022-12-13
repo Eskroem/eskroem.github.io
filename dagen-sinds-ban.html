@@ -1,0 +1,94 @@
+<!--
+██╗   ██╗███╗   ██╗██████╗  █████╗ ███╗   ██╗
+██║   ██║████╗  ██║██╔══██╗██╔══██╗████╗  ██║
+██║   ██║██╔██╗ ██║██████╔╝███████║██╔██╗ ██║
+██║   ██║██║╚██╗██║██╔══██╗██╔══██║██║╚██╗██║
+╚██████╔╝██║ ╚████║██████╔╝██║  ██║██║ ╚████║
+ ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
+██████╗ ██╗     ███████╗
+██╔══██╗██║     ██╔════╝
+██████╔╝██║     ███████╗
+██╔═══╝ ██║     ╚════██║
+██║     ███████╗███████║
+╚═╝     ╚══════╝╚══════╝
+-->
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="titel">Dagen Sinds Ban</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        background-color: #151515;
+        color: #fff;
+        font-family: "Rubik", sans-serif;
+        text-align: center;
+        padding-top: 128px;
+      }
+
+      a {
+        color: #aaf;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline 2px solid #aaf;
+      }
+
+      #d {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 128px;
+        font-weight: 400;
+        line-height: 128px;
+        margin: 0px;
+      }
+
+      h1,
+      h2 {
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 64px;
+        margin: 0px;
+      }
+
+      p {
+        font-size: 32px;
+        line-height: 32px;
+        margin: 32px;
+      }
+      span {
+        font-family: "Jetbrains Mono", monospace;
+        line-height: 32px;
+        margin: 0px;
+      }
+    </style>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <p><a href="index.html">Home</a></p>
+    <h2>Ik ben nu al</h2>
+    <h1><span id="d">{dagen}</span> dagen</h1>
+    <h2>geband van daboyzzz.</h2>
+    <p>Deze pagina updatet over <span id="s">{seconden}</span> seconden.</p>
+  </body>
+  <script>
+    function update() {
+      ms = Date.now() - 1650754800000;
+      d = Math.floor(ms / 86400000);
+      s = Math.ceil((Math.ceil(ms / 86400000) * 86400000 - ms) / 1000);
+      document.getElementById("titel").textContent = d + " dagen sinds ban";
+      document.getElementById("s").textContent = s;
+      document.getElementById("d").textContent = d;
+    }
+
+    update();
+    setInterval(update, 100);
+  </script>
+</html>
