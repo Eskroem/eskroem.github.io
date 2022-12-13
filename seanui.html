@@ -10,15 +10,15 @@
   </head>
   <body>
     <nav>
-      <img src="icon.png" alt="InfHub Icon" width="128px" style="position: sticky; top: 0" />
+      <img src="icon.png" alt="InfHub Icon" width="128px" height="128px" style="position: sticky; top: 0" />
       <h3>Contents</h3>
-      <a href="#a">a</a>
-      <a href="#h1h6">h1–h6</a>
+      <p><a href="#a">a</a></p>
+      <p><a href="#h1h6">h1–h6</a></p>
     </nav>
     <section>
       <header>
-        <p>Navigation [<a href="index.html">home</a>] [<a href="etg.html">etg (🇳🇱)</a>] [<a href="sitemap.html">sitemap</a>]</p>
-        <p>Theme [ <a onclick="darkMode()">dark</a> ] [ <a onclick="lightMode()">light</a> ]</p>
+        <p><b>Navigation:</b> <a href="index.html">Home</a> | <a href="etg.html">ETG (🇳🇱)</a> | SeanUI | <a href="sitemap.html">Sitemap</a></p>
+        <p><b>Theme:</b> <a onclick="darkMode()">Display</a> | <a onclick="lightMode()">Print</a></p>
       </header>
       <article>
         <h1>SeanUI</h1>
@@ -93,7 +93,7 @@ h1 /* Without Border */ {
         >
         <h2>Trivia</h2>
         <p>The Logo used is not an SVG.</p>
-        <p>Eskroem in Japanese is エスクルム.</p>
+        <p>InfHub in Japanese is インフハブ.</p>
       </article>
     </section>
   </body>
@@ -101,25 +101,37 @@ h1 /* Without Border */ {
     var r = document.querySelector(":root");
 
     function darkMode() {
-      r.style.setProperty("--bg0-color", "#000");
+      r.style.setProperty("--title", "Rubik, sans-serif");
+      r.style.setProperty("--text", "Rubik, sans-serif");
+      r.style.setProperty("--code", "'JetBrains Mono', Monospace");
+
       r.style.setProperty("--bg-color", "#151515");
       r.style.setProperty("--bg2-color", "#2a2a2a");
-      r.style.setProperty("--bg3-color", "#3f3f3f");
-      r.style.setProperty("--txt-color", "#fff");
-      r.style.setProperty("--red", "#f55");
-      r.style.setProperty("--blue", "#55f");
-      r.style.setProperty("--purple", "#f5f");
+      r.style.setProperty("--border-color", "#3f3f3f");
+      r.style.setProperty("--title-color", "#fff");
+      r.style.setProperty("--text-color", "#fff");
+
+      r.style.setProperty("--blue-bg-color", "#00002a");
+      r.style.setProperty("--blue-border-color", "#15153f");
+      r.style.setProperty("--accent-color", "#55f");
+      r.style.setProperty("--link-color", "#aaf");
     }
 
     function lightMode() {
-      r.style.setProperty("--bg0-color", "#fff");
+      r.style.setProperty("--title", 'Georgia, "Times New Roman", sans-serif');
+      r.style.setProperty("--text", "Arial, Calibri, sans-serif");
+      r.style.setProperty("--code", "'Consolas', Monospace");
+
       r.style.setProperty("--bg-color", "#fff");
-      r.style.setProperty("--bg2-color", "#aaa");
-      r.style.setProperty("--bg3-color", "#555");
-      r.style.setProperty("--txt-color", "#000");
-      r.style.setProperty("--red", "#a00");
-      r.style.setProperty("--blue", "#00a");
-      r.style.setProperty("--purple", "#a0a");
+      r.style.setProperty("--bg2-color", "#fff");
+      r.style.setProperty("--border-color", "#aaa");
+      r.style.setProperty("--title-color", "#00a");
+      r.style.setProperty("--text-color", "#000");
+
+      r.style.setProperty("--blue-bg-color", "#00002a");
+      r.style.setProperty("--blue-border-color", "#15153f");
+      r.style.setProperty("--accent-color", "#00a");
+      r.style.setProperty("--link-color", "#00a");
     }
   </script>
 </html>
