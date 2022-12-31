@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SeanUI – Sandbox</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10..0,25..151,100..1000" />
+    <style>
+      :root {
+        --opsz: 16;
+        --slnt: 0;
+        --wdth: 100;
+        --wght: 400;
+      }
+      h1 {
+        font-family: "Roboto Flex";
+        font-size: 144px;
+        font-variation-settings: "opsz" var(--opsz), "slnt" var(--slnt), "wdth" var(--wdth), "wght" var(--wght);
+        line-height: 144px;
+        margin: 16px;
+      }
+
+      body {
+        background-color: #151515;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div><span>opsz: 8</span><input type="range" min="8" max="144" value="16" oninput="opsz()" id="opsz" /><span>144</span></div>
+      <div><span>slnt: -10</span><input type="range" min="-10" max="0" value="0" oninput="slnt()" id="slnt" /><span>0</span></div>
+      <div><span>wdth: 25</span><input type="range" min="25" max="151" value="100" oninput="wdth()" id="wdth" /><span>151</span></div>
+      <div><span>wght: 100</span><input type="range" min="100" max="1000" value="400" oninput="wght()" id="wght" /><span>1000</span></div>
+      <h1 contenteditable>Hello World!</h1>
+      <script>
+        function opsz() {
+          document.querySelector(":root").style.setProperty("--opsz", document.getElementById("opsz").value);
+        }
+
+        function slnt() {
+          document.querySelector(":root").style.setProperty("--slnt", document.getElementById("slnt").value);
+        }
+
+        function wdth() {
+          document.querySelector(":root").style.setProperty("--wdth", document.getElementById("wdth").value);
+        }
+
+        function wght() {
+          document.querySelector(":root").style.setProperty("--wght", document.getElementById("wght").value);
+        }
+      </script>
+      <!-- <label>Country</label>
+       <select>
+        <option>Afghanistan</option>
+        <option>Albania</option>
+        <option>Algeria</option>
+        <option>Andorra</option>
+        <option>Angola</option>
+        <option>Antigua and Barbuda</option>
+        <option>Argentina</option>
+        <option>Armenia</option>
+        <option>Australia</option>
+        <option>Austria</option>
+        <option>Azerbaijan</option>
+        <option disabled></option>
+        <option>Bahamas</option>
+        <option>Bahrain</option>
+        <option>Bangladesh</option>
+        <option>Barbados</option>
+        <option>Belarus</option>
+        <option>Belgium</option>
+        <option>Belize</option>
+        <option>Benin</option>
+        <option>Bhutan</option>
+        <option>Bolivia (Plurinational State of)</option>
+        <option>Bosnia and Herzegovina</option>
+        <option>Botswana</option>
+        <option>Brazil</option>
+        <option>Brunei Darussalam</option>
+        <option>Bulgaria</option>
+        <option>Burkina Faso</option>
+        <option>Burundi</option>
+        <option disabled></option>
+        <option>Cabo Verde</option>
+        <option>Cambodia</option>
+        <option>Cameroon</option>
+        <option>Canada</option>
+        <option>Central African Republic</option>
+        <option>Chad</option>
+        <option>Chile</option>
+        <option>China</option>
+        <option>Colombia</option>
+        <option>Comoros</option>
+        <option>Congo</option>
+        <option>Costa Rica</option>
+        <option>Côte D’Ivoire</option>
+        <option>Croatia</option>
+        <option>Cuba</option>
+        <option>Cyprus</option>
+        <option>Czechia</option>
+        <option disabled></option>
+        <option>Democratic People’s Republic of Korea</option>
+        <option>Denmark</option>
+        <option>Djibouti</option>
+        <option>Dominica</option>
+        <option>Dominican Republic</option>
+        <option disabled></option>
+        <option>Ecuador</option>
+        <option>Egypt</option>
+        <option>El Savador</option>
+        <option>Equatorial Guinea</option>
+        <option>Eritrea</option>
+        <option>Estonia</option>
+        <option>Eswatini</option>
+        <option>Ethiopia</option>
+        <option disabled></option>
+        <option>Figi</option>
+        <option>Finland</option>
+        <option>France</option>
+        <option disabled></option>
+        <option>Gabon</option>
+        <option>Gambia (Republic of The)</option>
+        <option>Georgia</option>
+        <option>Germany</option>
+        <option>Ghana</option>
+        <option>Greece</option>
+        <option>Grenada</option>
+        <option>Guatemala</option>
+        <option>Guinea</option>
+        <option>Guinea Bissau</option>
+        <option>Guyana</option>
+        <option disabled></option>
+        <option>Haiti</option>
+        <option>Honduras</option>
+        <option>Hungary</option>
+        <option disabled></option>
+        <option>Iceland</option>
+        <option>India</option>
+        <option>Indonesia</option>
+        <option>Iran (Islamic Republic of)</option>
+        <option>Iraq</option>
+        <option>Ireland</option>
+        <option>Israel</option>
+        <option>Italy</option>
+        <option disabled></option>
+        <option>Jamaica</option>
+        <option>Japan</option>
+        <option>Jordan</option>
+        <option disabled></option>
+        <option>Kazakhstan</option>
+        <option>Kenya</option>
+        <option>Kiribati</option>
+        <option>Kuwait</option>
+        <option>Kyrgyzstan</option>
+        <option disabled></option>
+        <option>Lao People’s Democratic Republic</option>
+        <option>Latvia</option>
+        <option>Lebanon</option>
+        <option>Lesotho</option>
+        <option>Liberia</option>
+        <option>Libya</option>
+        <option>Liechtenstein</option>
+        <option>Lithuania</option>
+        <option>Luxembourg</option>
+        <option disabled></option>
+        <option>Madagascar</option>
+        <option>Malawi</option>
+        <option>Malaysia</option>
+        <option>Maldives</option>
+        <option>Mali</option>
+        <option>Malta</option>
+        <option>Marshall Islands</option>
+        <option>Mauritania</option>
+        <option>Mauritius</option>
+        <option>Mexico</option>
+        <option>Micronesia (Federated States of)</option>
+        <option>Monaco</option>
+        <option>Mongolia</option>
+        <option>Montenegro</option>
+        <option>Morocco</option>
+        <option>Mozambique</option>
+        <option>Myanmar</option>
+        <option disabled></option>
+        <option>Namibia</option>
+        <option>Nauru</option>
+        <option>Nepal</option>
+        <option>Netherlands</option>
+        <option>New Zealand</option>
+        <option>Nicaragua</option>
+        <option>Niger</option>
+        <option>Nigeria</option>
+        <option>North Macedonia</option>
+        <option>Norway</option>
+        <option disabled></option>
+        <option>Oman</option>
+        <option disabled></option>
+        <option>Pakistan</option>
+        <option>Palau</option>
+        <option>Panama</option>
+        <option>Papua New Guinea</option>
+        <option>Paraguay</option>
+        <option>Peru</option>
+        <option>Philippines</option>
+        <option>Poland</option>
+        <option>Portugal</option>
+        <option disabled></option>
+        <option>Qatar</option>
+        <option disabled></option>
+        <option>Republic of Korea</option>
+        <option>Republic of Moldova</option>
+        <option>Romania</option>
+        <option>Russian Federation</option>
+        <option>Rwanda</option>
+        <option disabled></option>
+        <option>Saint Kitts and Nevis</option>
+        <option>Saint Lucia</option>
+        <option>Saint Vincent and the Grenadines</option>
+        <option>Samoa</option>
+        <option>San Marino</option>
+        <option>Sao Tome and Principe</option>
+        <option>Saudi Arabia</option>
+        <option>Senegal</option>
+        <option>Serbia</option>
+        <option>Seychelles</option>
+        <option>Sierra Leone</option>
+        <option>Singapore</option>
+        <option>Slovakia</option>
+        <option>Slovenia</option>
+        <option>Solomon Islands</option>
+        <option>Somalia</option>
+        <option>South Africa</option>
+        <option>South Sudan</option>
+        <option>Spain</option>
+        <option>Sri Lanka</option>
+        <option>Sudan</option>
+        <option>Suriname</option>
+        <option>Sweden</option>
+        <option>Switzerlands</option>
+        <option>Syrian Arab Republic</option>
+        <option disabled></option>
+        <option>Tajikistan</option>
+        <option>Thailand</option>
+        <option>Timor-Leste</option>
+        <option>Togo</option>
+        <option>Tonga</option>
+        <option>Trinidad and Tobago</option>
+        <option>Tunisia</option>
+        <option>Türkiye</option>
+        <option>Turkmenistan</option>
+        <option>Tuvalu</option>
+        <option disabled></option>
+        <option>Uganda</option>
+        <option>Ukraine</option>
+        <option>United Arab Emirates</option>
+        <option>United Kingdom of Great Britain and Northern Ireland</option>
+        <option>United Republic of Tanzania</option>
+        <option>United States of America</option>
+        <option>Uruguay</option>
+        <option>Uzbekistan</option>
+        <option disabled></option>
+        <option>Vanuatu</option>
+        <option>Venezuela, Bolivarian Republic of</option>
+        <option>Viet Nam</option>
+        <option disabled></option>
+        <option>Yemen</option>
+        <option disabled></option>
+        <option>Zambia</option>
+        <option>Zimbabwe</option>
+      </select> -->
+    </article>
+  </body>
+</html>
