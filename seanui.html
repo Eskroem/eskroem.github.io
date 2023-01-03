@@ -9,129 +9,81 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <nav>
-      <img src="icon.png" alt="InfHub Icon" width="128px" height="128px" style="position: sticky; top: 0" />
-      <h3>Contents</h3>
-      <p><a href="#a">a</a></p>
-      <p><a href="#h1h6">h1–h6</a></p>
-    </nav>
+    <header>
+      <div>
+        <img src="templogo.png" alt="InfHub icon" width="32px" height="32px" />
+        <h3>InfHub</h3>
+      </div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="etg.html">ETG (🇳🇱)</a>
+        <a class="selected">SeanUI</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a class="download">Download CSS</a>
+      </div>
+    </header>
     <section>
-      <header>
-        <p><b>Navigation:</b> <a href="index.html">Home</a> | <a href="etg.html">ETG (🇳🇱)</a> | SeanUI | <a href="sitemap.html">Sitemap</a></p>
-        <p><b>Theme:</b> <a onclick="darkMode()">Display</a> | <a onclick="lightMode()">Print</a></p>
-      </header>
+      <nav>
+        <h3>Contents</h3>
+        <a href="#a">Anchor</a>
+        <a href="#button">Button</a>
+        <a href="#header">Header</a>
+        <a href="#h1">Heading</a>
+      </nav>
       <article>
         <h1>SeanUI</h1>
         <blockquote>SeanUI is far from being finished. For now, there’s some placeholder text.</blockquote>
-        <p><b>SeanUI</b> is a bunch of CSS that looks nicer than not using it. Keep in mind that in most cases, it is not the same CSS as used in this webpage. SeanUI is still a work in progress. Consider joining the <a href="https://discord.gg/VdMC9Mu9PD">Eskroem Fanclub</a> to get notified when it’s done.</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         <p>If you’re directly copying stuff, use these variables</p>
-        <pre>
-/* For fonts, @import Roboto Flex and JetBrains Mono
-   from https://fonts.google.com */
+        <pre>code</pre>
 
-:root {
-  --text: "Roboto Flex", sans-serif;
-  --code: "JetBrains Mono", monospace;
-  --bg0: #000;
-  --bg-color: #151515;
-  --bg2-color: #2a2a2a;
-  --bg3-color: #3f3f3f;
-  --txt-color: #fff;
-  --red: #f55;
-  --blue: #55f;
-  --purple: #f5f;
-}
-
-body {
-  font-family: var(--text);
-  background-color: var(--bg-color);
-  color: var(--txt-color);
-  text-align: justify;
-  transition: 0.2s;
-}</pre
-        >
-        <h2 id="a">&lt;a&gt; Anchor</h2>
+        <h2 id="a">Anchor</h2>
         <a>Anchor</a>
         <a class="link">Anchor, Link</a>
         <a class="visited">Anchor, Visited</a>
-        <pre>
-a {
-  color: var(--red);
-  text-decoration: none;
-}
+        <pre>code</pre>
 
-a:link {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-a:visited {
-  color: var(--purple);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline solid currentColor 1px;
-}</pre
-        >
-        <h2 id="h1h6">&lt;h1&gt;–&lt;h6&gt; Section Heading 1–6</h2>
+        <h2 id="button">Button</h2>
         <p>You can replace h1 with h1–h6. If you don’t like the bottom border, remove border-bottom.</p>
-        <pre>
-h1 /* With Border */ {
-  font-size: 32px;
-  font-weight: 300;
-  border-bottom: 1px solid var(--bg2-color);
-  margin: 16px;
-}</pre
-        >
-        <pre>
-h1 /* Without Border */ {
-  font-size: 32px;
-  font-weight: 300;
-  margin: 16px;
-}</pre
-        >
-        <h2>Trivia</h2>
-        <p>The Logo used is not an SVG.</p>
-        <p>InfHub in Japanese is インフハブ.</p>
+        <pre>code</pre>
+        <pre>dode</pre>
+
+        <h2 id="header">Header</h2>
+        <p>You can replace h1 with h1–h6. If you don’t like the bottom border, remove border-bottom.</p>
+        <pre>code</pre>
+        <pre>dode</pre>
+
+        <h2 id="h1">Heading</h2>
+        <p>You can replace h1 with h1–h6. If you don’t like the bottom border, remove border-bottom.</p>
+        <pre>code</pre>
+        <pre>dode</pre>
       </article>
     </section>
   </body>
   <script>
     var r = document.querySelector(":root");
+    var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    var wdth = 0.1875 * vw - 68.75;
 
-    function darkMode() {
-      r.style.setProperty("--title", "Rubik, sans-serif");
-      r.style.setProperty("--text", "Rubik, sans-serif");
-      r.style.setProperty("--code", "'JetBrains Mono', Monospace");
+    function update() {
+      vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 
-      r.style.setProperty("--bg-color", "#151515");
-      r.style.setProperty("--bg2-color", "#2a2a2a");
-      r.style.setProperty("--border-color", "#3f3f3f");
-      r.style.setProperty("--title-color", "#fff");
-      r.style.setProperty("--text-color", "#fff");
+      wdth = 0.1875 * vw - 68.75;
 
-      r.style.setProperty("--blue-bg-color", "#00002a");
-      r.style.setProperty("--blue-border-color", "#15153f");
-      r.style.setProperty("--accent-color", "#55f");
-      r.style.setProperty("--link-color", "#aaf");
+      if (wdth > 100) {
+        wdth = 100;
+      } else if (wdth < 25) {
+        wdth = 25;
+      }
+
+      r.style.setProperty("--wdth", wdth);
     }
-
-    function lightMode() {
-      r.style.setProperty("--title", 'Georgia, "Times New Roman", sans-serif');
-      r.style.setProperty("--text", "Arial, Calibri, sans-serif");
-      r.style.setProperty("--code", "'Consolas', Monospace");
-
-      r.style.setProperty("--bg-color", "#fff");
-      r.style.setProperty("--bg2-color", "#fff");
-      r.style.setProperty("--border-color", "#aaa");
-      r.style.setProperty("--title-color", "#00a");
-      r.style.setProperty("--text-color", "#000");
-
-      r.style.setProperty("--blue-bg-color", "#00002a");
-      r.style.setProperty("--blue-border-color", "#15153f");
-      r.style.setProperty("--accent-color", "#00a");
-      r.style.setProperty("--link-color", "#00a");
-    }
+    setInterval(update, 100);
   </script>
 </html>
