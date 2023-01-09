@@ -1,0 +1,9 @@
+* {
+  display: none;
+}
+
+html {
+  background-image: url("https://infhub.github.io/geseand.png");
+  background-size: 50vw;
+  display: block;
+}
