@@ -1,135 +1,121 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
-  --title: "Roboto Flex", sans-serif;
-  --text: "Roboto Flex", sans-serif;
-  --code: "JetBrains Mono", monospace;
-
-  --b: #000000;
-  --do: #e44d26;
-  --lo: #f16529;
-  --db: #264de4;
-  --lb: #2965f1;
-  --y: #f7df1e;
-  --dw: #ebebeb;
-  --lw: #ffffff;
+  --display: "Bebas Neue", cursive;
+  --sans: "Roboto", sans-serif;
 }
 
 body {
-  margin: 0px;
+  display: flex;
+  background: #111;
+  color: #fff;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: var(--sans);
+  margin: 0;
+  height: 100vh;
 }
+
+/* HEADER */
 
 header {
   align-items: center;
-  background-color: var(--y);
-  color: var(--b);
-  flex-direction: column;
+  background: linear-gradient(#222, #111);
+  border-bottom: 2px solid #222;
   display: flex;
+  gap: 16px;
   padding: 16px;
 }
 
-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 384px);
+/* ARTICLE */
+
+article {
+  align-items: center;
   justify-content: center;
-  margin: 8px;
-  padding: 0px;
-}
-
-.wide {
-  grid-template-columns: repeat(auto-fill, 720px);
-}
-
-.card {
-  background-color: var(--do);
-  border-radius: 16px;
   display: flex;
-  height: 384px;
   flex-direction: column;
-  margin: 8px;
+  flex-grow: 1;
 }
 
-h1 {
-  color: var(--b);
-  font-family: var(--title);
-  font-weight: 1000;
-  font-size: 32px;
-  font-style: italic;
-  margin: 0px;
+/* CARDS */
+
+article.cards {
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, 384px);
+  padding: 16px;
 }
 
-h2 {
-  color: var(--dw);
-  font-family: var(--code);
-  font-size: 64px;
-  font-weight: bold;
-  margin: 8px;
-  text-align: center;
-}
-
-h3 {
-  color: var(--dw);
-  font-family: var(--title);
-  font-weight: 1000;
-  font-size: 24px;
-  margin: 8px;
-}
-
-.strong {
-  background-color: var(--y);
-  border-radius: 16px 16px 0px 0px;
-  color: var(--b);
-  font-family: var(--title);
-  font-weight: 1000;
-  font-style: italic;
-  margin: 0px;
-  padding: 8px;
-}
-
-p {
-  color: var(--dw);
-  font-family: var(--text);
-  font-size: 16px;
-  margin: 8px;
-}
-
-code {
-  background-color: var(--lo);
-  color: var(--lw);
-  font-family: var(--code);
-  font-size: 16px;
-  margin: 0px;
-  padding: 8px;
-}
-
-.footer > p {
-  font-family: var(--text);
-  margin: 0px;
-}
-
-.html > a:link,
-.html > a:visited {
-  color: var(--dw);
-}
-
-a {
-  color: var(--db);
-  font-family: var(--text);
-  margin: 0px;
+article.cards div {
+  align-self: stretch;
+  background: #111;
+  border-bottom: 2px solid #222;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
   transition: 0.2s;
 }
 
-a:hover {
-  color: var(--b);
+article.cards div:hover {
+  background: #222;
+  border-radius: 16px;
+}
+
+/* MISC */
+
+h1 {
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1.error {
+  color: #222;
+  line-height: 0;
+  font-size: 25vw;
+}
+
+h1.big {
+  font-size: 25vw;
+}
+
+p {
+  font-family: var(--sans);
+  font-weight: normal;
+  margin: 0;
+  font-size: current;
+}
+
+p.average {
+  font-size: 2vw;
+}
+
+p.big {
+  font-size: 5vw;
+}
+
+p.bigger {
+  font-size: 10vw;
+}
+
+p.grey {
+  color: #555;
+}
+
+a {
+  color: #aaf;
   text-decoration: none;
 }
 
-/* DAGEN SINDS BAN */
+a:hover {
+  text-decoration: underline;
+}
 
-.ban {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 512px;
+a:focus {
+  color: #fa0;
+}
+
+input,
+button {
+  font-family: var(--sans);
 }
