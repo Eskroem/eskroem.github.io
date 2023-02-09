@@ -1,1 +1,1 @@
-# infhub.github.io
+# [InfHub.GitHub.io](https://infhub.github.io)
