@@ -27,6 +27,19 @@ header {
   padding: 16px;
 }
 
+header a {
+  height: 32px;
+}
+
+header a:hover {
+  border-radius: 16px;
+  background: #b00b69;
+}
+
+header a:focus {
+  background: #fa0;
+}
+
 /* ARTICLE */
 
 article {
@@ -104,11 +117,12 @@ p.grey {
 
 a {
   color: #aaf;
-  text-decoration: none;
+  text-decoration: underline 2px transparent;
+  transition: 0.2s;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline 2px #aaf;
 }
 
 a:focus {
@@ -119,3 +133,37 @@ input,
 button {
   font-family: var(--sans);
 }
+
+input[type="number"] {
+  width: 32px;
+}
+
+th {
+  font-family: var(--display);
+  font-weight: normal;
+  font-size: 32px;
+}
+/* ::SELECTIONS */
+
+*::selection {
+  color: #000;
+  background: #fff;
+}
+
+a::selection {
+  background: #aaf;
+}
+
+a:focus::selection {
+  background: #fa0;
+}
+
+p.grey::selection {
+  background: #555;
+}
+
+img::selection {
+  background: #b00b69;
+}
+
+/* Ik was vandaag niet Real */
