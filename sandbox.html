@@ -1,162 +1,445 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sandbox – InfHub</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       :root {
-        --opsz: 16;
-        --slnt: 0;
-        --wdth: 100;
-        --wght: 400;
-        --grad: 0;
-        --xtra: 468;
-        --yopq: 79;
-        --ytas: 750;
-        --ytde: -203;
-        --ytfi: 738;
-        --ytlc: 514;
-        --ytuc: 712;
+          --opsz: 16;
+          --slnt: 0;
+          --wdth: 100;
+          --wght: 400;
+          --grad: 0;
+          --xtra: 468;
+          --yopq: 79;
+          --ytas: 750;
+          --ytde: -203;
+          --ytfi: 738;
+          --ytlc: 514;
+          --ytuc: 712;
+      }
+
+      header {
+          align-items: center;
+          background: linear-gradient(#222, #111);
+          border-bottom: 2px solid #222;
+          display: flex;
+          gap: 16px;
+          padding: 16px;
+      }
+
+      header a {
+          height: 32px;
+      }
+
+      header a:hover {
+          border-radius: 16px;
+          background: #b00b69;
+      }
+
+      header a:focus {
+          background: #fa0;
+      }
+
+      header h1 {
+          font-family: "Bebas Neue", cursive;
+          font-size: 32px;
+          font-weight: normal;
+          margin: 0;
       }
 
       body {
-        font-family: "Roboto Flex";
-        background-color: #111;
-        color: #fff;
-        margin: 0px;
+          font-family: "Roboto Flex";
+          background-color: #111;
+          color: #fff;
+          margin: 0px;
       }
 
       h1 {
-        font-size: 144px;
-        font-variation-settings: "opsz" var(--opsz), "slnt" var(--slnt), "wdth" var(--wdth), "wght" var(--wght), "GRAD" var(--grad), "XTRA" var(--xtra), "YOPQ" var(--yopq), "YTAS" var(--ytas), "YTDE" var(--ytde), "YTFI" var(--ytfi), "YTLC" var(--ytlc), "YTUC" var(--ytuc);
-        margin: 16px;
+          font-size: 144px;
+          font-variation-settings: "opsz" var(--opsz), "slnt" var(--slnt), "wdth" var(--wdth), "wght" var(--wght), "GRAD" var(--grad), "XTRA" var(--xtra), "YOPQ" var(--yopq), "YTAS" var(--ytas), "YTDE" var(--ytde), "YTFI" var(--ytfi), "YTLC" var(--ytlc), "YTUC" var(--ytuc);
+          margin: 16px;
       }
 
       h2 {
-        font-size: 32px;
-        font-variation-settings: "wdth" 150;
-        font-weight: 700;
+          font-size: 32px;
+          font-variation-settings: "wdth" 150;
+          font-weight: 700;
       }
 
       section:hover {
-        color: #aaa;
+          color: #aaa;
       }
 
       div {
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        padding-left: 16px;
+          border-top: 1px solid transparent;
+          border-bottom: 1px solid transparent;
+          padding-left: 16px;
       }
 
       div:hover {
-        background: #222;
-        border-top: 1px solid #333;
-        border-bottom: 1px solid #333;
-        color: #fff;
+          background: #222;
+          border-top: 1px solid #333;
+          border-bottom: 1px solid #333;
+          color: #fff;
       }
 
       span {
-        display: inline-block;
-        font-size: 16px;
-        margin-right: 16px;
-        width: 48px;
+          display: inline-block;
+          font-size: 16px;
+          margin-right: 16px;
+          width: 48px;
       }
 
       p {
-        margin: 16px;
+          margin: 16px;
       }
 
       a {
-        color: #aaf;
-        text-decoration: none;
+          color: #aaf;
+          text-decoration: none;
       }
 
       a:hover {
-        text-decoration: underline;
+          text-decoration: underline;
       }
 
       code {
-        font-family: "Roboto Mono", monospace;
-        font-size: 12px;
+          font-family: "Roboto Mono", monospace;
+          font-size: 12px;
       }
 
       .abbr {
-        font-variation-settings: "wdth" 25;
-        width: 32px;
-        text-decoration: underline #555;
+          font-variation-settings: "wdth" 25;
+          width: 32px;
+          text-decoration: underline #555;
       }
 
       .min {
-        font-variation-settings: "wdth" 25;
-        text-align: right;
-        width: 32px;
+          font-variation-settings: "wdth" 25;
+          text-align: right;
+          width: 32px;
       }
 
       input {
-        width: calc(100vw - 512px);
-        min-width: 64px;
-        max-width: 512px;
+          width: calc(100vw - 512px);
+          min-width: 64px;
+          max-width: 512px;
       }
 
       output {
-        display: inline-block;
-        font-variation-settings: "wdth" 25;
-        margin-right: 16px;
-        text-align: right;
-        width: 32px;
+          display: inline-block;
+          font-variation-settings: "wdth" 25;
+          margin-right: 16px;
+          text-align: right;
+          width: 32px;
       }
 
       .max {
-        font-variation-settings: "wdth" 25;
-        text-align: right;
-        width: 32px;
+          font-variation-settings: "wdth" 25;
+          text-align: right;
+          width: 32px;
       }
 
       .wide {
-        width: 112px;
+          width: 112px;
       }
 
       *::selection {
-        background: #eee;
-        color: #111;
+          background: #eee;
+          color: #111;
       }
     </style>
   </head>
   <body>
     <article>
-      <h2>Roboto Flex Sandbox</h2><p><a href="index.html">Home</a></p>
+      <header>
+        <a><img src="icon.svg" alt="" width="32" /></a>
+        <h1>InfHub</h1>
+      </header>
+      <h2>Roboto Flex Sandbox</h2>
       <section>
-        <div style="font-weight: bold"><span class="abbr">Axis</span><span class="min">Min.</span><input type="range" disabled=""><output>Value</output><span class="max">Max.</span><span>Examples</span></div>
-        <div><span class="abbr" title="Optical Size">opsz</span><span class="min">8</span><input type="range" min="8" max="144" value="16" oninput="f('opsz')" id="opsz"><output>16</output><span class="max">144</span><span style="font-variation-settings: 'opsz' 8" class="wide">glaze</span><span style="font-variation-settings: 'opsz' 144" class="wide">glaze</span></div>
-        <div><span class="abbr" title="Slant">slnt</span><span class="min">-10</span><input type="range" min="-10" max="0" value="0" oninput="f('slnt')" id="slnt"><output>0</output><span class="max">0</span><span style="font-variation-settings: 'slnt' -10" class="wide">lean-to</span><span style="font-variation-settings: 'slnt' 0" class="wide">lean-to</span></div>
-        <div><span class="abbr" title="Width">wdth</span><span class="min">25</span><input type="range" min="25" max="151" value="100" oninput="f('wdth')" id="wdth"><output>100</output><span class="max">151</span><span style="font-variation-settings: 'wdth' 25" class="wide">spacious</span><span style="font-variation-settings: 'wdth' 151" class="wide">spacious</span></div>
-        <div><span class="abbr" title="Weight">wght</span><span class="min">100</span><input type="range" min="100" max="1000" value="400" oninput="f('wght')" id="wght"><output>400</output><span class="max">1000</span><span style="font-variation-settings: 'wght' 100" class="wide">thicken</span><span style="font-variation-settings: 'wght' 1000" class="wide">thicken</span></div>
-        <div><span class="abbr" title="Grade">GRAD</span><span class="min">-200</span><input type="range" min="-200" max="150" value="0" oninput="f('grad')" id="grad"><output>0</output><span class="max">150</span><span style="font-variation-settings: 'GRAD' -200" class="wide">slightly</span><span style="font-variation-settings: 'GRAD' 150" class="wide">slightly</span></div>
-        <div><span class="abbr" title="Counter Width">XTRA</span><span class="min">323</span><input type="range" min="323" max="603" value="468" oninput="f('xtra')" id="xtra"><output>346</output><span class="max">603</span><span style="font-variation-settings: 'XTRA' -323">Hoho</span><span>Hoho</span><span style="font-variation-settings: 'XTRA' 603">Hoho</span></div>
-        <div><span class="abbr" title="Thin Stroke">YOPQ</span><span class="min">25</span><input type="range" min="25" max="135" value="79" oninput="f('yopq')" id="yopq"><output>79</output><span class="max">135</span><span style="font-variation-settings: 'YOPQ' 25">Hh</span><span>Hh</span><span style="font-variation-settings: 'YOPQ' 135">Hh</span></div>
-        <div><span class="abbr" title="Ascender Height">YTAS</span><span class="min">649</span><input type="range" min="649" max="854" value="750" oninput="f('ytas')" id="ytas"><output>821</output><span class="max">854</span><span style="font-variation-settings: 'YTAS' 649">Hh</span><span>Hh</span><span style="font-variation-settings: 'YTAS' 854">Hh</span></div>
-        <div><span class="abbr" title="Descender Depth">YTDE</span><span class="min">-305</span><input type="range" min="-305" max="-98" value="-203" oninput="f('ytde')" id="ytde"><output>-203</output><span class="max">-98</span><span style="font-variation-settings: 'YTDE' -305">Pp</span><span>Pp</span><span style="font-variation-settings: 'YTDE' -98">Pp</span></div>
-        <div><span class="abbr" title="Figure Height">YTFI</span><span class="min">560</span><input type="range" min="560" max="788" value="738" oninput="f('ytfi')" id="ytfi"><output>738</output><span class="max">788</span><span style="font-variation-settings: 'YTFI' 560">h10</span><span>h10</span><span style="font-variation-settings: 'YTFI' 788">h10</span></div>
-        <div><span class="abbr" title="Lowercase Height">YTLC</span><span class="min">416</span><input type="range" min="416" max="570" value="514" oninput="f('ytlc')" id="ytlc"><output>514</output><span class="max">570</span><span style="font-variation-settings: 'YTLC' 416">Hh</span><span>Hh</span><span style="font-variation-settings: 'YTLC' 570">Hh</span></div>
-        <div><span class="abbr" title="Uppercase Height">YTUC</span><span class="min">528</span><input type="range" min="528" max="760" value="712" oninput="f('ytuc')" id="ytuc"><output>712</output><span class="max">760</span><span style="font-variation-settings: 'YTUC' 528">Hh</span><span>Hh</span><span style="font-variation-settings: 'YTUC' 760">Hh</span></div>
+        <div style="font-weight: bold">
+          <span class="abbr">Axis</span><span class="min">Min.</span
+          ><input type="range" disabled="" /><output>Value</output
+          ><span class="max">Max.</span><span>Examples</span>
+        </div>
+        <div>
+          <span class="abbr" title="Optical Size">opsz</span
+          ><span class="min">8</span
+          ><input
+            type="range"
+            min="8"
+            max="144"
+            value="16"
+            oninput="f('opsz')"
+            id="opsz"
+          /><output>16</output><span class="max">144</span
+          ><span style="font-variation-settings: 'opsz' 8" class="wide"
+            >glaze</span
+          ><span style="font-variation-settings: 'opsz' 144" class="wide"
+            >glaze</span
+          >
+        </div>
+        <div>
+          <span class="abbr" title="Slant">slnt</span
+          ><span class="min">-10</span
+          ><input
+            type="range"
+            min="-10"
+            max="0"
+            value="0"
+            oninput="f('slnt')"
+            id="slnt"
+          /><output>0</output><span class="max">0</span
+          ><span style="font-variation-settings: 'slnt' -10" class="wide"
+            >lean-to</span
+          ><span style="font-variation-settings: 'slnt' 0" class="wide"
+            >lean-to</span
+          >
+        </div>
+        <div>
+          <span class="abbr" title="Width">wdth</span><span class="min">25</span
+          ><input
+            type="range"
+            min="25"
+            max="151"
+            value="100"
+            oninput="f('wdth')"
+            id="wdth"
+          /><output>100</output><span class="max">151</span
+          ><span style="font-variation-settings: 'wdth' 25" class="wide"
+            >spacious</span
+          ><span style="font-variation-settings: 'wdth' 151" class="wide"
+            >spacious</span
+          >
+        </div>
+        <div>
+          <span class="abbr" title="Weight">wght</span
+          ><span class="min">100</span
+          ><input
+            type="range"
+            min="100"
+            max="1000"
+            value="400"
+            oninput="f('wght')"
+            id="wght"
+          /><output>400</output><span class="max">1000</span
+          ><span style="font-variation-settings: 'wght' 100" class="wide"
+            >thicken</span
+          ><span style="font-variation-settings: 'wght' 1000" class="wide"
+            >thicken</span
+          >
+        </div>
+        <div>
+          <span class="abbr" title="Grade">GRAD</span
+          ><span class="min">-200</span
+          ><input
+            type="range"
+            min="-200"
+            max="150"
+            value="0"
+            oninput="f('grad')"
+            id="grad"
+          /><output>0</output><span class="max">150</span
+          ><span style="font-variation-settings: 'GRAD' -200" class="wide"
+            >slightly</span
+          ><span style="font-variation-settings: 'GRAD' 150" class="wide"
+            >slightly</span
+          >
+        </div>
+        <div>
+          <span class="abbr" title="Counter Width">XTRA</span
+          ><span class="min">323</span
+          ><input
+            type="range"
+            min="323"
+            max="603"
+            value="468"
+            oninput="f('xtra')"
+            id="xtra"
+          /><output>346</output><span class="max">603</span
+          ><span style="font-variation-settings: 'XTRA' -323">Hoho</span
+          ><span>Hoho</span
+          ><span style="font-variation-settings: 'XTRA' 603">Hoho</span>
+        </div>
+        <div>
+          <span class="abbr" title="Thin Stroke">YOPQ</span
+          ><span class="min">25</span
+          ><input
+            type="range"
+            min="25"
+            max="135"
+            value="79"
+            oninput="f('yopq')"
+            id="yopq"
+          /><output>79</output><span class="max">135</span
+          ><span style="font-variation-settings: 'YOPQ' 25">Hh</span
+          ><span>Hh</span
+          ><span style="font-variation-settings: 'YOPQ' 135">Hh</span>
+        </div>
+        <div>
+          <span class="abbr" title="Ascender Height">YTAS</span
+          ><span class="min">649</span
+          ><input
+            type="range"
+            min="649"
+            max="854"
+            value="750"
+            oninput="f('ytas')"
+            id="ytas"
+          /><output>821</output><span class="max">854</span
+          ><span style="font-variation-settings: 'YTAS' 649">Hh</span
+          ><span>Hh</span
+          ><span style="font-variation-settings: 'YTAS' 854">Hh</span>
+        </div>
+        <div>
+          <span class="abbr" title="Descender Depth">YTDE</span
+          ><span class="min">-305</span
+          ><input
+            type="range"
+            min="-305"
+            max="-98"
+            value="-203"
+            oninput="f('ytde')"
+            id="ytde"
+          /><output>-203</output><span class="max">-98</span
+          ><span style="font-variation-settings: 'YTDE' -305">Pp</span
+          ><span>Pp</span
+          ><span style="font-variation-settings: 'YTDE' -98">Pp</span>
+        </div>
+        <div>
+          <span class="abbr" title="Figure Height">YTFI</span
+          ><span class="min">560</span
+          ><input
+            type="range"
+            min="560"
+            max="788"
+            value="738"
+            oninput="f('ytfi')"
+            id="ytfi"
+          /><output>738</output><span class="max">788</span
+          ><span style="font-variation-settings: 'YTFI' 560">h10</span
+          ><span>h10</span
+          ><span style="font-variation-settings: 'YTFI' 788">h10</span>
+        </div>
+        <div>
+          <span class="abbr" title="Lowercase Height">YTLC</span
+          ><span class="min">416</span
+          ><input
+            type="range"
+            min="416"
+            max="570"
+            value="514"
+            oninput="f('ytlc')"
+            id="ytlc"
+          /><output>514</output><span class="max">570</span
+          ><span style="font-variation-settings: 'YTLC' 416">Hh</span
+          ><span>Hh</span
+          ><span style="font-variation-settings: 'YTLC' 570">Hh</span>
+        </div>
+        <div>
+          <span class="abbr" title="Uppercase Height">YTUC</span
+          ><span class="min">528</span
+          ><input
+            type="range"
+            min="528"
+            max="760"
+            value="712"
+            oninput="f('ytuc')"
+            id="ytuc"
+          /><output>712</output><span class="max">760</span
+          ><span style="font-variation-settings: 'YTUC' 528">Hh</span
+          ><span>Hh</span
+          ><span style="font-variation-settings: 'YTUC' 760">Hh</span>
+        </div>
       </section>
       <p>Click the text below to edit it.</p>
       <h2>Import Roboto Flex</h2>
-      <code>@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760");</code>
+      <code
+        >@import
+        url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760");</code
+      >
       <h2>Font Variation Settings</h2>
-      <code id="y">font-variation-settings: "opsz" 16 "slnt" 0 "wdth" 100 "wght" 400 "GRAD" 0 "XTRA" 468 "YOPQ" 79 "YTAS" 750 "YTDE" -203 "YTFI" 738 "YTLC" 514 "YTUC" 712;</code>
+      <code id="y"
+        >font-variation-settings: "opsz" 16 "slnt" 0 "wdth" 100 "wght" 400
+        "GRAD" 0 "XTRA" 468 "YOPQ" 79 "YTAS" 750 "YTDE" -203 "YTFI" 738 "YTLC"
+        514 "YTUC" 712;</code
+      >
       <h1 contenteditable="">Hoho Hh Pp h10</h1>
       <script>
         function f(x) {
-          document.querySelector(":root").style.setProperty("--" + x, document.getElementById(x).value);
-          document.getElementById(x).nextElementSibling.textContent = document.getElementById(x).value;
-          document.getElementById("y").textContent = 'font-variation-settings: "opsz" ' + getComputedStyle(document.documentElement).getPropertyValue("--opsz") + ' "slnt" ' + getComputedStyle(document.documentElement).getPropertyValue("--slnt") + ' "wdth" ' + getComputedStyle(document.documentElement).getPropertyValue("--wdth") + ' "wght" ' + getComputedStyle(document.documentElement).getPropertyValue("--wght") + ' "GRAD" ' + getComputedStyle(document.documentElement).getPropertyValue("--grad") + ' "XTRA" ' + getComputedStyle(document.documentElement).getPropertyValue("--xtra") + ' "YOPQ" ' + getComputedStyle(document.documentElement).getPropertyValue("--yopq") + ' "YTAS" ' + getComputedStyle(document.documentElement).getPropertyValue("--ytas") + ' "YTDE" ' + getComputedStyle(document.documentElement).getPropertyValue("--ytde") + ' "YTFI" ' + getComputedStyle(document.documentElement).getPropertyValue("--ytfi") + ' "YTLC" ' + getComputedStyle(document.documentElement).getPropertyValue("--ytlc") + ' "YTUC" ' + getComputedStyle(document.documentElement).getPropertyValue("--ytuc");
+          document
+            .querySelector(":root")
+            .style.setProperty("--" + x, document.getElementById(x).value);
+          document.getElementById(x).nextElementSibling.textContent =
+            document.getElementById(x).value;
+          document.getElementById("y").textContent =
+            'font-variation-settings: "opsz" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--opsz"
+            ) +
+            ' "slnt" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--slnt"
+            ) +
+            ' "wdth" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--wdth"
+            ) +
+            ' "wght" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--wght"
+            ) +
+            ' "GRAD" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--grad"
+            ) +
+            ' "XTRA" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--xtra"
+            ) +
+            ' "YOPQ" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--yopq"
+            ) +
+            ' "YTAS" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--ytas"
+            ) +
+            ' "YTDE" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--ytde"
+            ) +
+            ' "YTFI" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--ytfi"
+            ) +
+            ' "YTLC" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--ytlc"
+            ) +
+            ' "YTUC" ' +
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--ytuc"
+            );
         }
       </script>
     </article>
-  
-
-</body></html>
+  </body>
+</html>
